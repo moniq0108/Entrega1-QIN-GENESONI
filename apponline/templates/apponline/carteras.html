@@ -32,11 +32,15 @@
       <th>
         <strong>Codigo</strong>
       </th>
+      <th>
+        <strong>Stock</strong>
+      </th>
     </tr>
     {% for cartera in carteras %}
     <tr>
       <td>{{cartera.nombre}}</td>
-      <td>{{cartera.comision}}</td>
+      <td>{{cartera.codigo}}</td>
+      <td>{{cartera.stock}}</td>
     </tr>
     {% endfor %}
   </tbody>

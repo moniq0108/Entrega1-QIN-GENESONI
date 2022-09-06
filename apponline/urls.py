@@ -11,4 +11,10 @@ urlpatterns = [
     path('crear-carteras/', views.carteras_formulario, name="carteras_formulario"),
     path('busqueda-carteras-form/', views.busqueda_carteras, name="busqueda_carteras_form"),
     path('busqueda-carteras/', views.buscar, name="busqueda_carteras"),
+    path('crear-camperas/', views.camperas_formulario, name="camperas_formulario"),
+    path('busqueda-camperas-form/', views.busqueda_camperas, name="busqueda_camperas_form"),
+    path('crear-zapatos/', views.zapatos_formulario, name="zapatos_formulario"),
+    path('busqueda-zapatos-form/', views.busqueda_zapatos, name="busqueda_zapatos_form"),
+    path('crear-accesorios/', views.accesorios_formulario, name="accesorios_formulario"),
+    path('busqueda-accesorios-form/', views.busqueda_accesorios, name="busqueda_accesorios_form"),
 ]
