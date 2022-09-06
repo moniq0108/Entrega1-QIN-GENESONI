@@ -64,10 +64,10 @@ def busqueda_carteras(request):
 
 
 
-def buscar(request):
+def buscar_carteras(request):
       if request.GET["codigo"]:
             codigo = request.GET["codigo"]
-            carteras = carteras.objects.filter(codigo__icontains=codigo)
+            carteras = Carteras.objects.filter(codigo__icontains=codigo)
             return render(request, "apponline/carteras.html", {'carteras': carteras})
       else:
             return render(request, "apponline/carteras.html", {'carteras': []})
@@ -88,7 +88,13 @@ def camperas_formulario(request):
 def busqueda_camperas(request):
             return render(request, "apponline/form_busqueda_camperas.html")
 
-
+def buscar_camperas(request):
+      if request.GET["codigo"]:
+            codigo = request.GET["codigo"]
+            camperas = Camperas.objects.filter(codigo__icontains=codigo)
+            return render(request, "apponline/camperas.html", {'camperas': camperas})
+      else:
+            return render(request, "apponline/camperas.html", {'camperas': []})
 
 def zapatos_formulario(request):
       if request.method == 'POST':
@@ -106,6 +112,13 @@ def zapatos_formulario(request):
 def busqueda_zapatos(request):
             return render(request, "apponline/form_busqueda_zapatos.html")
 
+def buscar_zapatos(request):
+      if request.GET["codigo"]:
+            codigo = request.GET["codigo"]
+            zapatos = Zapatos.objects.filter(codigo__icontains=codigo)
+            return render(request, "apponline/zapatos.html", {'zapatos': zapatos})
+      else:
+            return render(request, "apponline/zapatos.html", {'zapatos': []})
 
 def accesorios_formulario(request):
       if request.method == 'POST':
@@ -122,3 +135,11 @@ def accesorios_formulario(request):
 
 def busqueda_accesorios(request):
             return render(request, "apponline/form_busqueda_accesorios.html")
+
+def buscar_accesorios(request):
+      if request.GET["codigo"]:
+            codigo = request.GET["codigo"]
+            accesorios = Accesorios.objects.filter(codigo__icontains=codigo)
+            return render(request, "apponline/accesorios.html", {'accesorios': accesorios})
+      else:
+            return render(request, "apponline/accesorios.html", {'accesorios': []})
